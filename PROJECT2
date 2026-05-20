@@ -1,0 +1,169 @@
+-- MySQL dump 10.13  Distrib 8.0.46, for Win64 (x86_64)
+--
+-- Host: 127.0.0.1    Database: school_db
+-- ------------------------------------------------------
+-- Server version	8.4.7
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `courses`
+--
+
+DROP TABLE IF EXISTS `courses`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `courses` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `courses`
+--
+
+LOCK TABLES `courses` WRITE;
+/*!40000 ALTER TABLE `courses` DISABLE KEYS */;
+INSERT INTO `courses` VALUES (1,'mathematics'),(2,'science'),(3,'arbic language'),(4,'english language'),(5,'history'),(6,'computer science');
+/*!40000 ALTER TABLE `courses` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `students`
+--
+
+DROP TABLE IF EXISTS `students`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `students` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `birthdate` date DEFAULT NULL,
+  `GENDER` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `join_date` date DEFAULT NULL,
+  `email` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `level` int DEFAULT NULL,
+  `track` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `gpa` decimal(5,2) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `students`
+--
+
+LOCK TABLES `students` WRITE;
+/*!40000 ALTER TABLE `students` DISABLE KEYS */;
+INSERT INTO `students` VALUES (1,'Ali Ahmed','2005-01-10','MALE','2020-09-01','ali.new@school.com',1,'Science',85.50),(2,'Mona Khalid','2004-03-22','FEMALE','2019-09-01','mona@school.com',2,'Arts',90.00),(3,'Omar Salem','2005-07-15','MALE','2020-09-01','omar@school.com',1,'Science',78.25),(4,'Hana Tariq','2003-11-05','FEMALE','2018-09-01','hana@school.com',3,'Arts',88.75),(5,'Yousef Nasser','2004-05-30','MALE','2019-09-01','yousef@school.com',2,'Science',92.00),(6,'Lina Omar','2003-09-18','FEMALE','2018-09-01','lina@school.com',3,'Science',76.50),(7,'Faisal Ali','2002-12-25','MALE','2017-09-01','faisal@school.com',4,'Arts',83.00),(8,'Sara Hassan','2002-04-14','FEMALE','2017-09-01','sara@school.com',4,'Science',95.50),(9,'Khalid Mohamed','2001-08-03','MALE','2016-09-01','khalid@school.com',5,'Arts',70.25),(10,'Nora Faisal','2001-02-20','FEMALE','2016-09-01','nora@school.com',5,'Science',88.00),(11,'Tariq Ibrahim','2000-06-12','MALE','2015-09-01','tariq@school.com',6,'Arts',79.75),(12,'Maha Abdullah','2000-10-28','FEMALE','2015-09-01','maha@school.com',6,'Science',91.25),(13,'Hassan Omar','2005-02-17','MALE','2020-09-01','hassan@school.com',1,'Arts',82.00),(14,'Reem Khalid','2004-06-08','FEMALE','2019-09-01','reem@school.com',2,'Science',87.50),(15,'Sami Nasser','2005-04-23','MALE','2020-09-01','sami@school.com',1,'Science',74.00),(16,'Dana Salem','2004-08-15','FEMALE','2019-09-01','dana@school.com',2,'Arts',93.75),(17,'Majed Ali','2003-12-30','MALE','2018-09-01','majed@school.com',3,'Science',81.50),(18,'Hessa Tariq','2003-03-11','FEMALE','2018-09-01','hessa@school.com',3,'Arts',89.00),(19,'Walid Hassan','2002-07-24','MALE','2017-09-01','walid@school.com',4,'Science',77.25),(20,'Abeer Mohamed','2002-11-06','FEMALE','2017-09-01','abeer@school.com',4,'Arts',94.50),(21,'Nabil Omar','2001-05-19','MALE','2016-09-01','nabil@school.com',5,'Science',86.00),(22,'Sheikha Faisal','2001-09-02','FEMALE','2016-09-01','sheikha@school.com',5,'Arts',72.75),(23,'Rashed Ibrahim','2000-01-15','MALE','2015-09-01','rashed@school.com',6,'Science',90.50),(24,'Latifa Abdullah','2000-05-28','FEMALE','2015-09-01','latifa@school.com',6,'Arts',85.25),(25,'Saad Khalid','2005-03-07','MALE','2020-09-01','saad@school.com',1,'Science',80.00),(26,'Hind Salem','2004-07-20','FEMALE','2019-09-01','hind@school.com',2,'Arts',91.75),(27,'Fahad Nasser','2005-05-13','MALE','2020-09-01','fahad@school.com',1,'Science',73.50),(28,'Noura Ali','2004-09-26','FEMALE','2019-09-01','noura@school.com',2,'Science',88.25),(29,'Bader Hassan','2003-01-09','MALE','2018-09-01','bader@school.com',3,'Arts',76.00),(30,'Aisha Tariq','2003-05-22','FEMALE','2018-09-01','aisha@school.com',3,'Science',92.50);
+/*!40000 ALTER TABLE `students` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `teachers`
+--
+
+DROP TABLE IF EXISTS `teachers`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `teachers` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `birthdate` date DEFAULT NULL,
+  `gender` char(1) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `office_number` int DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `teachers`
+--
+
+LOCK TABLES `teachers` WRITE;
+/*!40000 ALTER TABLE `teachers` DISABLE KEYS */;
+INSERT INTO `teachers` VALUES (1,'Ahmed Ali','1985-03-15','M','ahmed@school.com',201),(2,'Sara Mohamed','1990-07-22','F','sara@school.com',102),(3,'Khalid Omar','1982-11-10','M','khalid@school.com',103),(4,'Fatima Hassan','1988-05-30','F','fatima@school.com',104),(5,'Omar Abdullah','1979-09-05','M','omar@school.com',105),(6,'Nora Salem','1993-01-18','F','nora@school.com',106),(7,'Yousef Ibrahim','1986-04-25','M','yousef@school.com',107),(8,'Maha Khalid','1991-08-14','F','maha@school.com',108),(9,'Tariq Nasser','1984-12-03','M','tariq@school.com',109),(10,'Lina Faisal','1987-06-20','F','lina@school.com',110);
+/*!40000 ALTER TABLE `teachers` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `top_students`
+--
+
+DROP TABLE IF EXISTS `top_students`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `top_students` (
+  `id` int NOT NULL DEFAULT '0',
+  `name` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `birthdate` date DEFAULT NULL,
+  `gender` char(1) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `join_date` date DEFAULT NULL,
+  `email` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `level` int DEFAULT NULL,
+  `track` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `gpa` decimal(5,2) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `top_students`
+--
+
+LOCK TABLES `top_students` WRITE;
+/*!40000 ALTER TABLE `top_students` DISABLE KEYS */;
+INSERT INTO `top_students` VALUES (5,'Yousef Nasser','2004-05-30','M','2019-09-01','yousef@school.com',2,'Science',92.00),(8,'Sara Hassan','2002-04-14','F','2017-09-01','sara@school.com',4,'Science',95.50),(12,'Maha Abdullah','2000-10-28','F','2015-09-01','maha@school.com',6,'Science',91.25),(16,'Dana Salem','2004-08-15','F','2019-09-01','dana@school.com',2,'Arts',93.75),(20,'Abeer Mohamed','2002-11-06','F','2017-09-01','abeer@school.com',4,'Arts',94.50),(23,'Rashed Ibrahim','2000-01-15','M','2015-09-01','rashed@school.com',6,'Science',90.50),(26,'Hind Salem','2004-07-20','F','2019-09-01','hind@school.com',2,'Arts',91.75),(30,'Aisha Tariq','2003-05-22','F','2018-09-01','aisha@school.com',3,'Science',92.50);
+/*!40000 ALTER TABLE `top_students` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `weak_students`
+--
+
+DROP TABLE IF EXISTS `weak_students`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `weak_students` (
+  `id` int NOT NULL DEFAULT '0',
+  `name` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `birthdate` date DEFAULT NULL,
+  `gender` char(1) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `join_date` date DEFAULT NULL,
+  `email` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `level` int DEFAULT NULL,
+  `track` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `gpa` decimal(5,2) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `weak_students`
+--
+
+LOCK TABLES `weak_students` WRITE;
+/*!40000 ALTER TABLE `weak_students` DISABLE KEYS */;
+/*!40000 ALTER TABLE `weak_students` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2026-05-20  6:13:16
